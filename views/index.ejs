@@ -16,7 +16,7 @@
 </div>
 
 <!-- Categories Start -->
-
+<h2>Categories</h2>
 <div class="row row-cols-2 row-cols-lg-6 g-2 g-lg-3 py-4">
 <% if(categories != '') { %>
     <% categories.forEach(function(category, index) { %>
@@ -41,7 +41,7 @@
 
 <!-- latest start -->
 
-<section class="pb-4 pt-4">
+<section class="pb-5 pt-5">
     <div class="d-flex mb-2 align-items-center">
       <h2>Latest Recipes</h2>
       <a href="/explore-latest" class="ms-auto">View More</a>
@@ -49,28 +49,37 @@
 
     <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
         <a href="/recipe/#" class="col text-center category__link">
-            <div class="category__img shadow">
+            <div class="category__img category__img--large shadow">
                 <img src="/img/chocolate-banoffe-whoopie-pies.jpg" alt="chocolate-banoffe" loading="lazy">
             </div>
             <div class="pt-1">chocolate-banoffe</div>
         </a>
-    </div>
-    <div class="row-row-col-2 row-cols-lg-5 g-2 g-lg-3">
         <a href="/recipe/#" class="col text-center category__link">
-            <div class="category__img shadow">
+            <div class="category__img category__img--large shadow">
                 <img src="/img/chocolate-banoffe-whoopie-pies.jpg" alt="chocolate-banoffe" loading="lazy">
             </div>
             <div class="pt-1">chocolate-banoffe</div>
         </a>
-    </div>
-    <div class="row-row-col-2 row-cols-lg-5 g-2 g-lg-3">
         <a href="/recipe/#" class="col text-center category__link">
-            <div class="category__img shadow">
+            <div class="category__img category__img--large shadow">
+                <img src="/img/chocolate-banoffe-whoopie-pies.jpg" alt="chocolate-banoffe" loading="lazy">
+            </div>
+            <div class="pt-1">chocolate-banoffe</div>
+        </a>
+        <a href="/recipe/#" class="col text-center category__link">
+            <div class="category__img category__img--large shadow">
+                <img src="/img/chocolate-banoffe-whoopie-pies.jpg" alt="chocolate-banoffe" loading="lazy">
+            </div>
+            <div class="pt-1">chocolate-banoffe</div>
+        </a>
+        <a href="/recipe/#" class="col text-center category__link">
+            <div class="category__img category__img--large shadow">
                 <img src="/img/chocolate-banoffe-whoopie-pies.jpg" alt="chocolate-banoffe" loading="lazy">
             </div>
             <div class="pt-1">chocolate-banoffe</div>
         </a>
     </div>
+    
 
 
 </section>
@@ -79,6 +88,16 @@
 
 <!-- Submit Start -->
 
-
+<section class="px-4 py-5 my-5 text-center">
+    <img src="/img/publish-recipe.png" class="d-block mx-auto mb-4 img-fluid" alt="Publish your recipe for FREE today" width="566" height="208" loading="lazy">
+    <h1 class="display-5 fw-bold">Publish your recipe for FREE today</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Publish your Recipe in front of thousands of people for free.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a href="/submit-recipe" class="btn btn-primary btn-dark btn-lg">Submit Recipe</a>
+      </div>
+    </div>
+  </section>
+   
 
 <!-- Submit end -->
