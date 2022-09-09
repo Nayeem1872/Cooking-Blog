@@ -42,51 +42,71 @@ exports.exploreCategories= async(req, res)=>{
     }
 
 }
+exports.login= async(req, res)=>{
+
+  try{
+
+      const limitNumber= 20;
+      const login = await Category.find({}).limit(limitNumber);
 
 
-async function insertDymmyRecipeData(){
-  try {
-    await Recipe.insertMany([
-      { 
-        "name": "Roasted parsnips",
-        "description": `The acidity of the vinegar cuts through the sweetness of the parsnips beautifully here, and the combo of bay and honey adds a real festive feel. For the best results, don't peel them.`,
-        "email": "nayeem@gmail.com",
-        "ingredients": [
-          "1 level teaspoon baking powder",
-          "1 level teaspoon cayenne pepper",
-          "1 level teaspoon hot smoked paprika",
-        ],
-        "category": "American", 
-        "image": "southern-friend-chicken.jpg"
-      },
-      { 
-        "name": "Chorizo & pear red cabbage",
-        "description": `Recipe Description Goes Here`,
-        "email": "recipeemail@raddy.co.uk",
-        "ingredients": [
-          "1 level teaspoon baking powder",
-          "1 level teaspoon cayenne pepper",
-          "1 level teaspoon hot smoked paprika",
-        ],
-        "category": "Thai", 
-        "image": "thai-style-mussels.jpg"
-      },
-      { 
-        "name": "Recipe Name Goes Here",
-        "description": `Recipe Description Goes Here`,
-        "email": "recipeemail@raddy.co.uk",
-        "ingredients": [
-          "1 level teaspoon baking powder",
-          "1 level teaspoon cayenne pepper",
-          "1 level teaspoon hot smoked paprika",
-        ],
-        "category": "American", 
-        "image": "southern-friend-chicken.jpg"
-      },
-    ]);
-  } catch (error) {
-    console.log('err', + error)
+      res.render('login',{title:'Login/Signup', login});
+
+
+
   }
+  catch(error){
+      res.status(500).send({message:error.message || "Error"})
+
+
+  }
+
 }
 
-insertDymmyRecipeData();
+
+// async function insertDymmyRecipeData(){
+//   try {
+//     await Recipe.insertMany([
+//       { 
+//         "name": "Roasted parsnips",
+//         "description": `The acidity of the vinegar cuts through the sweetness of the parsnips beautifully here, and the combo of bay and honey adds a real festive feel. For the best results, don't peel them.`,
+//         "email": "nayeem@gmail.com",
+//         "ingredients": [
+//           "1 level teaspoon baking powder",
+//           "1 level teaspoon cayenne pepper",
+//           "1 level teaspoon hot smoked paprika",
+//         ],
+//         "category": "American", 
+//         "image": "southern-friend-chicken.jpg"
+//       },
+//       { 
+//         "name": "Chorizo & pear red cabbage",
+//         "description": `Recipe Description Goes Here`,
+//         "email": "recipeemail@raddy.co.uk",
+//         "ingredients": [
+//           "1 level teaspoon baking powder",
+//           "1 level teaspoon cayenne pepper",
+//           "1 level teaspoon hot smoked paprika",
+//         ],
+//         "category": "Thai", 
+//         "image": "thai-style-mussels.jpg"
+//       },
+//       { 
+//         "name": "Recipe Name Goes Here",
+//         "description": `Recipe Description Goes Here`,
+//         "email": "recipeemail@raddy.co.uk",
+//         "ingredients": [
+//           "1 level teaspoon baking powder",
+//           "1 level teaspoon cayenne pepper",
+//           "1 level teaspoon hot smoked paprika",
+//         ],
+//         "category": "American", 
+//         "image": "southern-friend-chicken.jpg"
+//       },
+//     ]);
+//   } catch (error) {
+//     console.log('err', + error)
+//   }
+// }
+
+// insertDymmyRecipeData();
