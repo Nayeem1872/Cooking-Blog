@@ -19,7 +19,4 @@ app.use('/', routes);
 
 app.listen(PORT,()=>{
     console.log('server running');
-}) 
-
-
-    
+})
